@@ -1,5 +1,21 @@
-<h1>Lists</h1>
 
-<% @lists.each do |list| %>
-  <%= list.name  %>
-<% end %>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>Save any kind of movies!</h1>
+    <p>My lists</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
+
+<div class="card-lists">
+  <% @lists.each do |list| %>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="https://picsum.photos/200" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><%= list.name  %></h5>
+        <a href="#" class="btn btn-primary">Check it out!</a>
+      </div>
+    </div>
+  <% end %>
+ </div>
